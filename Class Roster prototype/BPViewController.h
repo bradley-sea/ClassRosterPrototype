@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BPViewController : UIViewController
+@interface BPViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

@@ -21,6 +21,15 @@
 		A2FE89C018774CCD007C7F60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FE89A218774CCC007C7F60 /* UIKit.framework */; };
 		A2FE89C818774CCD007C7F60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A2FE89C618774CCD007C7F60 /* InfoPlist.strings */; };
 		A2FE89CA18774CCD007C7F60 /* Class_Roster_prototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FE89C918774CCD007C7F60 /* Class_Roster_prototypeTests.m */; };
+		A2FE89D518774DAB007C7F60 /* BPStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FE89D418774DAB007C7F60 /* BPStudent.m */; };
+		A2FE89D818774F68007C7F60 /* BPCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FE89D718774F68007C7F60 /* BPCourse.m */; };
+		A2FE89F8187756F4007C7F60 /* Danny.png in Resources */ = {isa = PBXBuildFile; fileRef = A2FE89F2187756F4007C7F60 /* Danny.png */; };
+		A2FE89F9187756F4007C7F60 /* Jason.png in Resources */ = {isa = PBXBuildFile; fileRef = A2FE89F3187756F4007C7F60 /* Jason.png */; };
+		A2FE89FA187756F4007C7F60 /* Megha.png in Resources */ = {isa = PBXBuildFile; fileRef = A2FE89F4187756F4007C7F60 /* Megha.png */; };
+		A2FE89FC187756F4007C7F60 /* Will.png in Resources */ = {isa = PBXBuildFile; fileRef = A2FE89F6187756F4007C7F60 /* Will.png */; };
+		A2FE89FF1877589C007C7F60 /* BPStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FE89FE1877589C007C7F60 /* BPStudentViewController.m */; };
+		A2FE8A0318775CDF007C7F60 /* Brad.png in Resources */ = {isa = PBXBuildFile; fileRef = A2FE8A0218775CDF007C7F60 /* Brad.png */; };
+		A2FE8A0518775CF3007C7F60 /* Mike.png in Resources */ = {isa = PBXBuildFile; fileRef = A2FE8A0418775CF3007C7F60 /* Mike.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,18 @@
 		A2FE89C518774CCD007C7F60 /* Class Roster prototypeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Class Roster prototypeTests-Info.plist"; sourceTree = "<group>"; };
 		A2FE89C718774CCD007C7F60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A2FE89C918774CCD007C7F60 /* Class_Roster_prototypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Class_Roster_prototypeTests.m; sourceTree = "<group>"; };
+		A2FE89D318774DAB007C7F60 /* BPStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPStudent.h; sourceTree = "<group>"; };
+		A2FE89D418774DAB007C7F60 /* BPStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPStudent.m; sourceTree = "<group>"; };
+		A2FE89D618774F68007C7F60 /* BPCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPCourse.h; sourceTree = "<group>"; };
+		A2FE89D718774F68007C7F60 /* BPCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPCourse.m; sourceTree = "<group>"; };
+		A2FE89F2187756F4007C7F60 /* Danny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Danny.png; sourceTree = "<group>"; };
+		A2FE89F3187756F4007C7F60 /* Jason.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jason.png; sourceTree = "<group>"; };
+		A2FE89F4187756F4007C7F60 /* Megha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Megha.png; sourceTree = "<group>"; };
+		A2FE89F6187756F4007C7F60 /* Will.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Will.png; sourceTree = "<group>"; };
+		A2FE89FD1877589C007C7F60 /* BPStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPStudentViewController.h; sourceTree = "<group>"; };
+		A2FE89FE1877589C007C7F60 /* BPStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPStudentViewController.m; sourceTree = "<group>"; };
+		A2FE8A0218775CDF007C7F60 /* Brad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Brad.png; sourceTree = "<group>"; };
+		A2FE8A0418775CF3007C7F60 /* Mike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mike.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +138,12 @@
 				A2FE89B018774CCC007C7F60 /* Main.storyboard */,
 				A2FE89B318774CCC007C7F60 /* BPViewController.h */,
 				A2FE89B418774CCC007C7F60 /* BPViewController.m */,
+				A2FE89FD1877589C007C7F60 /* BPStudentViewController.h */,
+				A2FE89FE1877589C007C7F60 /* BPStudentViewController.m */,
+				A2FE89D618774F68007C7F60 /* BPCourse.h */,
+				A2FE89D718774F68007C7F60 /* BPCourse.m */,
+				A2FE89D318774DAB007C7F60 /* BPStudent.h */,
+				A2FE89D418774DAB007C7F60 /* BPStudent.m */,
 				A2FE89B618774CCD007C7F60 /* Images.xcassets */,
 				A2FE89A518774CCC007C7F60 /* Supporting Files */,
 			);
@@ -127,6 +154,12 @@
 			isa = PBXGroup;
 			children = (
 				A2FE89A618774CCC007C7F60 /* Class Roster prototype-Info.plist */,
+				A2FE89F2187756F4007C7F60 /* Danny.png */,
+				A2FE89F3187756F4007C7F60 /* Jason.png */,
+				A2FE89F4187756F4007C7F60 /* Megha.png */,
+				A2FE89F6187756F4007C7F60 /* Will.png */,
+				A2FE8A0218775CDF007C7F60 /* Brad.png */,
+				A2FE8A0418775CF3007C7F60 /* Mike.png */,
 				A2FE89A718774CCC007C7F60 /* InfoPlist.strings */,
 				A2FE89AA18774CCC007C7F60 /* main.m */,
 				A2FE89AC18774CCC007C7F60 /* Class Roster prototype-Prefix.pch */,
@@ -229,9 +262,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2FE8A0518775CF3007C7F60 /* Mike.png in Resources */,
+				A2FE89FC187756F4007C7F60 /* Will.png in Resources */,
+				A2FE89F9187756F4007C7F60 /* Jason.png in Resources */,
 				A2FE89B718774CCD007C7F60 /* Images.xcassets in Resources */,
+				A2FE89F8187756F4007C7F60 /* Danny.png in Resources */,
+				A2FE8A0318775CDF007C7F60 /* Brad.png in Resources */,
 				A2FE89A918774CCC007C7F60 /* InfoPlist.strings in Resources */,
 				A2FE89B218774CCC007C7F60 /* Main.storyboard in Resources */,
+				A2FE89FA187756F4007C7F60 /* Megha.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +292,9 @@
 				A2FE89B518774CCC007C7F60 /* BPViewController.m in Sources */,
 				A2FE89AF18774CCC007C7F60 /* BPAppDelegate.m in Sources */,
 				A2FE89AB18774CCC007C7F60 /* main.m in Sources */,
+				A2FE89D818774F68007C7F60 /* BPCourse.m in Sources */,
+				A2FE89FF1877589C007C7F60 /* BPStudentViewController.m in Sources */,
+				A2FE89D518774DAB007C7F60 /* BPStudent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,16 +28,12 @@
     
     self.title = @"Students";
     
- 
     self.course = [[BPCourse alloc] init];
-    
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    
     [self.tableView reloadData];
-
 }
 
 
@@ -56,9 +52,7 @@
     cell.imageView.image = studentForCell.image;
     cell.imageView.layer.cornerRadius = 22;
     cell.imageView.layer.masksToBounds = YES;
-    
-    
-    
+
     return cell;
 }
 

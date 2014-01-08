@@ -165,6 +165,8 @@ const CGFloat kViewControllerCellHeight = 50.0;
     [self.sortSheet showInView:self.view];
 }
 
+#pragma mark - UIActionSheetDelegate 
+
 -(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     NSLog(@"%ld", (long)buttonIndex);

@@ -56,14 +56,9 @@ const CGFloat kViewControllerCellHeight = 50.0;
         
         Student *student = [[Student alloc] initWithName:[studentDictionary objectForKey:@"name"]];
         
-        if ([studentDictionary objectForKey:@"twitter"])
-        {
             student.twitter = [studentDictionary objectForKey:@"twitter"];
-        }
-        if ([studentDictionary objectForKey:@"github"])
-        {
             student.github = [studentDictionary objectForKey:@"github"];
-        }
+        
         NSString *fileName = [NSString stringWithFormat:@"%@.png", student.name];
         NSString *filePath = [documentsPath stringByAppendingString:fileName];
         NSData *pngData = [NSData dataWithContentsOfFile:filePath];

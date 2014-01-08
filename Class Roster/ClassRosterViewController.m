@@ -20,6 +20,10 @@ const CGFloat kViewControllerCellHeight = 50.0;
 }
 
 @property (strong) NSMutableArray *students;
+@property (strong) NSString *filePathForPList;
+@property (strong) UIActionSheet *sortSheet;
+
+
 
 @end
 
@@ -29,17 +33,47 @@ const CGFloat kViewControllerCellHeight = 50.0;
 {
     [super viewDidLoad];
     
+    self.title = @"Students";
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kViewControllerCellIdentifier];
     self.tableView.contentInset = self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(20, 0, 0, 0);
     
     _students = [NSMutableArray new];
-    NSArray *studentNames = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Students" ofType:@"plist"]];
     
-    for (NSString *name in studentNames) {
-        Student *student = [[Student alloc] initWithName:name];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    self.filePathForPList = [documentsPath stringByAppendingString:@"students.plist"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:self.filePathForPList])
+    {
+        NSArray *temp = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Students" ofType:@"plist"]];
+        [temp writeToFile:self.filePathForPList atomically:YES];
+    }
+    
+    NSArray *studentNames = [NSArray arrayWithContentsOfFile:self.filePathForPList];
+    
+    for (NSDictionary *studentDictionary in studentNames) {
+        
+        Student *student = [[Student alloc] initWithName:[studentDictionary objectForKey:@"name"]];
+        
+        if ([studentDictionary objectForKey:@"twitter"])
+        {
+            student.twitter = [studentDictionary objectForKey:@"twitter"];
+        }
+        if ([studentDictionary objectForKey:@"github"])
+        {
+            student.github = [studentDictionary objectForKey:@"github"];
+        }
+        NSString *fileName = [NSString stringWithFormat:@"%@.png", student.name];
+        NSString *filePath = [documentsPath stringByAppendingString:fileName];
+        NSData *pngData = [NSData dataWithContentsOfFile:filePath];
+        if (pngData) student.profilePicture = [UIImage imageWithData:pngData];
+        
         [_students addObject:student];
     }
-
+    
+    self.sortSheet = [[UIActionSheet alloc] initWithTitle:@"Sort By" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"Name (Ascending)", @"Name (Descending)", nil];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -47,6 +81,16 @@ const CGFloat kViewControllerCellHeight = 50.0;
     [super viewDidAppear:animated];
     
     if (pathForSelectedCell) {
+        
+        NSArray *studentNames = [NSArray arrayWithContentsOfFile:self.filePathForPList];
+        NSDictionary *studentDictionary = [studentNames objectAtIndex:pathForSelectedCell.row];
+        
+        Student *student = [[Student alloc] initWithName:[studentDictionary objectForKey:@"name"]];
+        student.twitter = [studentDictionary objectForKey:@"twitter"];
+        student.github = [studentDictionary objectForKey:@"github"];
+        
+        [self.students replaceObjectAtIndex:pathForSelectedCell.row withObject:student];
+        
         [self.tableView reloadRowsAtIndexPaths:@[pathForSelectedCell] withRowAnimation:UITableViewRowAnimationFade];        
     }
 }
@@ -120,6 +164,30 @@ const CGFloat kViewControllerCellHeight = 50.0;
     if ([segue.destinationViewController isKindOfClass:[StudentDetailViewController class]]) {
         [segue.destinationViewController setStudent:_students[self.tableView.indexPathForSelectedRow.row]];
     }
+}
+- (IBAction)handleSortButton:(id)sender {
+    
+    [self.sortSheet showInView:self.view];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"%ld", (long)buttonIndex);
+    
+    if (buttonIndex == 0)
+    {
+        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+        self.students = [self.students sortedArrayUsingDescriptors:@[sort]];
+        [self.tableView reloadData];
+    }
+    else if (buttonIndex == 1)
+    {
+        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:NO];
+        self.students = [self.students sortedArrayUsingDescriptors:@[sort]];
+        [self.tableView reloadData];
+
+    }
+    
 }
 
 @end

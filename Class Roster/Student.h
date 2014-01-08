@@ -13,6 +13,8 @@
 - (instancetype) initWithName:(NSString *)name;
 
 @property (nonatomic) NSString *name;
+@property (nonatomic) NSString *twitter;
+@property (nonatomic) NSString *github;
 @property (nonatomic) UIImage *profilePicture;
 
 @end

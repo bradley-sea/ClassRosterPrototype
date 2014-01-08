@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ClassRosterViewController : UITableViewController
+@interface ClassRosterViewController : UITableViewController <UIActionSheetDelegate>
 
 @end

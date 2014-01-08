@@ -2,19 +2,109 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Willem Dafoe</string>
-	<string>Scottie Pippen</string>
-	<string>Oliver Twist</string>
-	<string>Rusty Shackleford</string>
-	<string>Hank Hill</string>
-	<string>David Copperfield</string>
-	<string>Michael Jordan</string>
-	<string>Barack Obama</string>
-	<string>Alan Turing</string>
-	<string>Dennis Ritchie</string>
-	<string>Elon Musk</string>
-	<string>Boy George</string>
-	<string>Oprah</string>
-	<string>Clint Eastwood</string>
+	<dict>
+		<key>name</key>
+		<string>William Dafoe</string>
+		<key>twitter</key>
+		<string></string>
+		<key>github</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Scottie Pippen</string>
+		<key>twitter</key>
+		<string>baller82</string>
+		<key>github</key>
+		<string>testgit</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Oliver Twist</string>
+		<key>twitter</key>
+		<string></string>
+		<key>github</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rusty Shackleford</string>
+		<key>twitter</key>
+		<string></string>
+		<key>github</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>David Copperfield</string>
+		<key>twitter</key>
+		<string></string>
+		<key>github</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Michael Jordan</string>
+		<key>twitter</key>
+		<string></string>
+		<key>github</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Barack Obama</string>
+		<key>twitter</key>
+		<string></string>
+		<key>github</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Alan Turing</string>
+		<key>twitter</key>
+		<string></string>
+		<key>github</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dennis Ritchie</string>
+		<key>twitter</key>
+		<string></string>
+		<key>github</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Elon Musk</string>
+		<key>twitter</key>
+		<string></string>
+		<key>github</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Boy George</string>
+		<key>twitter</key>
+		<string></string>
+		<key>github</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Oprah</string>
+		<key>twitter</key>
+		<string></string>
+		<key>github</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Clint Eastwood</string>
+		<key>twitter</key>
+		<string></string>
+		<key>github</key>
+		<string></string>
+	</dict>
 </array>
 </plist>
